@@ -28,3 +28,18 @@ function getBlogPostsFromLocalStorage() {
   }
 
 // TODO: Call the function to render the list of blog posts
+function renderBlogPosts() {
+    const blogPosts = getBlogPostsFromLocalStorage();
+    mainEl.innerHTML = '';
+    
+    if (blogPosts.length === 0) {
+      mainEl.innerHTML = '<p>No Blog posts yet...</p>';
+    } else {
+      blogPosts.forEach(post => {
+        addBlogPost(post.username, post.title, post.content);
+        });
+    }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    renderBlogPosts();
+  });
