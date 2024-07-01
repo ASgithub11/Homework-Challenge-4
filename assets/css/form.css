@@ -11,7 +11,7 @@ aside {
     var(--circle-color), 
     var(--dark-accent)
   );
-  clip-path: circle(20rem at center);
+  clip-path: circle(12rem at center);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ section {
 }
 
 aside > h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   color: white;
   text-shadow: 1px 1px 1px var(--dark-accent);
 }
@@ -70,6 +70,7 @@ textarea {
   border-width: 1px;
   font-size: 1rem;
   background-color: var(--light-accent);
+  width: 550px;
 }
 
 section {
@@ -96,4 +97,9 @@ section {
   opacity: .75;
   position: absolute;
   bottom: -2rem;
+}
+
+#toggle {
+  padding-bottom: 0px;
+  margin-left: 1192px;
 }
