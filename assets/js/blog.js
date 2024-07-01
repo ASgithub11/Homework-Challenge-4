@@ -18,7 +18,13 @@ function addBlogPost(username, title, content) {
 }
 
 // TODO: Create a function that handles the case where there are no blog posts to display
+function NoBlogPosts() {
+    mainEl.innerHTML = '<p>No Blog posts yet...</p>';
+  }
 
 // TODO: Create a function that reads from local storage and returns the data
+function getBlogPostsFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('blogPosts')) || [];
+  }
 
 // TODO: Call the function to render the list of blog posts
